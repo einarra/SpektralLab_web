@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nvidia Intrinsic Valuation | DCF Model</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card inputs-card">
+            <h1>NVDA Valuation</h1>
+            
+            <div class="input-group">
+                <label>Growth Rate (Years 1-5) <span id="label-growth-1-5">30%</span></label>
+                <input type="range" id="growth-1-5" min="0" max="100" value="30" step="1">
+            </div>
+
+            <div class="input-group">
+                <label>Growth Rate (Years 6-10) <span id="label-growth-6-10">15%</span></label>
+                <input type="range" id="growth-6-10" min="0" max="50" value="15" step="1">
+            </div>
+
+            <div class="input-group">
+                <label>Discount Rate (WACC) <span id="label-wacc">10%</span></label>
+                <input type="range" id="wacc" min="5" max="25" value="10" step="0.1">
+            </div>
+
+            <div class="input-group">
+                <label>Terminal Growth Rate <span id="label-terminal-growth">2.5%</span></label>
+                <input type="range" id="terminal-growth" min="0" max="5" value="2.5" step="0.1">
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">TTM FCF</span>
+                    <span class="stat-value">$77.3B</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Net Cash</span>
+                    <span class="stat-value">$52.1B</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Shares</span>
+                    <span class="stat-value">24.48B</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Model</span>
+                    <span class="stat-value">2-Stage</span>
+                </div>
+            </div>
+            
+            <p class="disclaimer">
+                DCF analysis is a fundamental valuation method. Projections are based on current estimates and subject to market volatility. Not financial advice.
+            </p>
+        </div>
+
+        <div class="card result-card">
+            <div class="valuation-header">
+                <span class="valuation-label">Intrinsic Value Per Share</span>
+                <div class="valuation-value" id="valuation-result">$0.00</div>
+                <p style="color: var(--text-secondary)">Based on your projections</p>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="fcf-chart"></canvas>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                    Current Market Price: <span style="color: #fff; font-weight: 600;">Check Latest Quote</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

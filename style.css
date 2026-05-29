@@ -427,6 +427,149 @@ footer {
     }
 }
 
+/* Breadcrumb */
+.breadcrumb {
+    text-align: left;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    list-style: none;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+
+.breadcrumb-list a {
+    color: var(--text-muted);
+}
+
+.breadcrumb-list a:hover {
+    color: var(--color-cyan);
+}
+
+/* Card link — whole card is clickable */
+a.card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-cta {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--color-cyan);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Tag chip */
+.tag-chip {
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    background: rgba(0, 210, 255, 0.08);
+    border: 1px solid rgba(0, 210, 255, 0.4);
+    border-radius: 20px;
+    font-size: 0.78rem;
+    color: var(--color-cyan);
+    margin-bottom: 1rem;
+}
+
+/* Blog styles */
+.blog-hero {
+    padding: 180px 0 60px;
+    min-height: auto;
+    text-align: left;
+}
+
+.blog-hero .container {
+    max-width: 800px;
+}
+
+.blog-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+.blog-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) 2rem var(--spacing-xl);
+}
+
+.blog-content h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    color: var(--text-main);
+}
+
+.blog-content h3 {
+    font-size: 1.25rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    text-align: left;
+    color: var(--text-main);
+}
+
+.blog-content p {
+    color: var(--text-muted);
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+}
+
+.blog-content ul,
+.blog-content ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-content ul {
+    list-style: disc;
+}
+
+.blog-content ol {
+    list-style: decimal;
+}
+
+.blog-content ul li,
+.blog-content ol li {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+
+.blog-cta {
+    background: rgba(0, 210, 255, 0.06);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.blog-cta h3 {
+    color: var(--color-cyan);
+    margin-bottom: 0.75rem;
+}
+
+.blog-cta p {
+    margin-bottom: 1.5rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     h1 {
